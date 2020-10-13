@@ -29,15 +29,18 @@ elif ("!start_shopping_list") == answer :
  while repeat == True:
    shopping_list = input("Please start your list here and type 'done' when finished").strip().lower()
 
- if shopping_list == 'done':
+ if shopping_list == "done":
          repeat= False
  else:
-      count = list_exe.count(shopping_list)
+    count = list_exe.count(shopping_list)
 
 
   #Double up prevention system on lists
-  if count > 0:
+    if count > 0:
       print("sorry {} is already on the list".format(shopping_list))
+    else:
+      list_exe.append(shopping_list)
+      print("{} has been added.".format(shopping_list))
 else:
      print("incorrect command")
 
